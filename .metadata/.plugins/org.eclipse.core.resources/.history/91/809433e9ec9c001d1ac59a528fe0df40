@@ -1,0 +1,9 @@
+package CucumberOptions;
+
+
+
+@RunWith(Cucumber.class)
+@CucumberOptions()
+public class TestNGTestRunner {
+
+}

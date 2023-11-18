@@ -1,0 +1,20 @@
+package com.linkedin;
+import com.linkedin.Implementation;
+
+public class Applications {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Contract contract=new Implementation();
+		printTerms(contract);
+
+	}
+	
+	public static void printTerms(Contract contract)
+	{
+		contract.term1();
+		contract.term2();
+	}
+
+}

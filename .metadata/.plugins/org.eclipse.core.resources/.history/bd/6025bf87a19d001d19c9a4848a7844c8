@@ -1,0 +1,79 @@
+package StepDefinition;
+
+import static org.testng.Assert.assertTrue;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;//Selenium java
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;////Selenium java
+
+import io.cucumber.java.en.Given;//cucumber-java
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;//webdrivermanager
+
+public class SearchProduct {
+
+	WebDriver driver;
+	String offerPageItem;
+	String landingPageItem;
+
+	@Given("User is on Greencart landing page")
+	public void user_is_on_greencart_landing_page() {
+		// Set up the wWebDriverManager for chrome driver
+		WebDriverManager.chromedriver().setup();
+		// Create the driver object
+		driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		Assert.assertEquals(driver.getTitle(), "GreenKart - veg and fruits kart");
+
+	}
+
+	@When("User searched with short name {string} and extracted actual name of product")
+	public void user_searched_with_short_name_and_extracted_actual_name_of_product(String item) {
+		driver.findElement(By.xpath("//input[@placeholder='Search for Vegetables and Fruits']")).sendKeys(item);
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		Thread.sleep(7000);
+		landingPageItem = driver.findElement(By.cssSelector("h4.product-name")).getText().split("-")[0].trim();
+
+		System.out.println("Product name extracted from home page:" + landingPageItem);
+
+		WebElement itemPresent = driver.findElement(By.xpath("//img[@alt='Tomato - 1 Kg']"));
+
+		Boolean itemDisplayed = itemPresent.isDisplayed();
+		if (itemDisplayed) {
+			Assert.assertTrue(true);
+		} else
+			Assert.assertTrue(false);
+	}
+
+	@Then("User searched for {string} short name in offer page")
+	public void user_searched_for_short_name_in_offer_page(String shortName) throws InterruptedException {
+
+		driver.findElement(By.xpath("//a[normalize-space()='Top Deals']")).click();
+		Set<String> windowids = driver.getWindowHandles();
+		Iterator<String> it = windowids.iterator();
+
+		while (it.hasNext()) {
+			String parentwindow = it.next();
+			String childWindow = it.next();
+			driver.switchTo().window(childWindow);
+		}
+		driver.findElement(By.cssSelector("#search-field")).sendKeys(shortName);
+		offerPageItem = driver.findElement(By.cssSelector("tr td:nth-child(1)")).getText();
+		System.out.println("Product name extracted from offer page:" + offerPageItem);
+		// driver.findElement(By.cssSelector("#search-field")).click();
+
+		Thread.sleep(5000);
+	}
+
+	@Then("Validate product name in offer page matches with landing page")
+	public void validate_product_name_in_offer_page_matches_with_landing_page() {
+		Assert.assertEquals(landingPageItem, offerPageItem);
+	}
+
+}

@@ -1,0 +1,21 @@
+
+public class ApplicationHotel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Rooms room1=new Rooms("oxford","suite",3,125.00);
+		Rooms room2=new Rooms("Stanford","private",1,400.00);
+		Rooms room3=new Rooms("IIM","guest",3,125.00);
+		
+		Collection<Rooms>=list.of(room1,room2,room3);
+		double rate=getPotentialRevenue(room1,room2,room3);
+		System.out.println(rate);
+	}
+	
+	public static double getPotentialRevenue(Rooms room1,Rooms room2,Rooms room3)
+	{
+		return room1.getRate()+room2.getRate()+room3.getRate();
+	}
+
+}

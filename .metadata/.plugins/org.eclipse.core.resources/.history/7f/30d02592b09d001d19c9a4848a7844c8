@@ -1,0 +1,23 @@
+package PageObjects;
+
+import org.openqa.selenium.By;
+
+import Utilities.TestContextSetup;
+
+public class LandingPage {
+	
+	TestContextSetup testContextSetup;
+	public LandingPage(TestContextSetup testContextSetup)
+	{
+		this.testContextSetup=testContextSetup;
+	}
+	
+	By searchLP=By.xpath("//input[@placeholder='Search for Vegetables and Fruits']");
+	
+	//action methods
+	public void searchItem(String name)
+	{
+		testContextSetup.driver.findElement(searchLP).sendKeys(name);
+	}
+
+}

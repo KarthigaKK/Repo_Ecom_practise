@@ -1,0 +1,10 @@
+
+public class ApplicationHotel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Rooms room1=new Rooms("oxford","suite",3,125.00);
+	}
+
+}

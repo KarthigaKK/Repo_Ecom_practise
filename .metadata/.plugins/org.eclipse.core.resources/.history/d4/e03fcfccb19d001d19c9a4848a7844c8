@@ -1,0 +1,32 @@
+package PageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import Utilities.TestContextSetup;
+
+public class LandingPage {
+	
+	public WebDriver driver;
+	public LandingPage(WebDriver driver)
+	{
+		this.driver=driver;
+	}
+	
+	By searchLP=By.xpath("//input[@placeholder='Search for Vegetables and Fruits']");
+	By itemName=By.cssSelector("h4.product-name");
+	
+	//action methods
+	public void searchItem(String name)
+	{
+		driver.findElement(searchLP).sendKeys(name);
+	}
+	
+	//testContextSetup.driver.findElement(By.cssSelector("h4.product-name")).getText()
+	
+	public String getItemText()
+	{
+		return driver.findElement(itemName).getText();
+	}
+
+}

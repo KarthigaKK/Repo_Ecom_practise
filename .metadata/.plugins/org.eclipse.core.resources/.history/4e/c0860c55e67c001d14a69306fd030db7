@@ -1,0 +1,29 @@
+package APITesting.MAMP;
+
+import org.junit.Test;
+
+import io.restassured.response.ValidatableResponse;
+import io.restassured.response.Response;
+import io.restassured.RestAssured;
+
+
+public class APITest {
+	
+	//@Test
+	public void getCategories()
+	{
+		String endpoint="http://LAP-KARTHIGA/api_testing/product/read.php";
+		ValidatableResponse response = RestAssured.given().when().get(endpoint).then();
+		response.log().body();		
+	}
+	
+
+	@Test
+	public void getProduct()
+	{
+		String endpoint="http://LAP-KARTHIGA/api_testing/product/read.php";
+		ValidatableResponse response = RestAssured.given().queryParam("id",2).get(endpoint).then();
+		response.log().body();
+	}
+
+}

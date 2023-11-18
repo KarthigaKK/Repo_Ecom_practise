@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;DuplicateArrayTwo&apos; to &apos;SumofDigits&apos;&#x0D;&#x0A;- Original project: &apos;Practise&apos;&#x0D;&#x0A;- Original element: &apos;DuplicateArrayTwo&apos;&#x0D;&#x0A;- Renamed element: &apos;SumofDigits&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DuplicateArrayTwo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/Java Practice&lt;{DuplicateArrayTwo.java[DuplicateArrayTwo" matchStrategy="1" name="SumofDigits" qualified="false" references="true" similarDeclarations="false" stamp="1667936218022" textual="false" version="1.0"/>
+</session>

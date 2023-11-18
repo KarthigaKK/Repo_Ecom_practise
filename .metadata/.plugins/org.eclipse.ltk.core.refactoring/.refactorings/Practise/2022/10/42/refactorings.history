@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;JavaLamdaExp&apos; to &apos;ArrayListEx&apos;&#x0D;&#x0A;- Original project: &apos;JavaPratices&apos;&#x0D;&#x0A;- Original element: &apos;JavaLamdaExp&apos;&#x0D;&#x0A;- Renamed element: &apos;ArrayListEx&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;JavaLamdaExp&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{JavaLamdaExp.java[JavaLamdaExp" matchStrategy="1" name="ArrayListEx" qualified="false" references="true" similarDeclarations="false" stamp="1665431022953" textual="false" version="1.0"/>
+</session>

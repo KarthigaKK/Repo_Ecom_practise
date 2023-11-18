@@ -1,0 +1,12 @@
+package CucumberOptions;
+
+
+
+@RunWith(Cucumber.class)
+@CucumberOptions(feature="",
+glue="",
+monochrome=true,
+dryrun=true)
+public class TestNGTestRunner {
+
+}

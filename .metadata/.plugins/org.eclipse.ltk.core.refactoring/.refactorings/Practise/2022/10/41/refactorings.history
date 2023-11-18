@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;JavaPratices/src/HashMap.java&apos; to &apos;SortHashMap.java&apos;" description="Rename resource &apos;HashMap.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/HashMap.java" name="SortHashMap.java" stamp="1664731418822" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;JavaPratices/src/stringvowels.java&apos; to &apos;stringrevs.java&apos;" description="Rename resource &apos;stringvowels.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/stringvowels.java" name="stringrevs.java" stamp="1664834923748" updateReferences="true"/>
+</session>

@@ -1,0 +1,30 @@
+package JavaPrograms;
+
+public class PrintStrAccordingToCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str = "a2b3c4"; //output = aabbbcccc
+		System.out.println(str.charAt(-1));
+		convertNumToChar(str);
+	}
+
+	private static void convertNumToChar(String s) {
+		// TODO Auto-generated method stub
+		for(int i =0; i < s.length(); i++) {
+			if(Character.isAlphabetic(s.charAt(i))){
+			System.out.print(s.charAt(i));
+			}else {
+			int a = Character.getNumericValue(s.charAt(i));//2
+			for(int j =1; j <a; j++) {//1<2
+				System.out.println(i);
+			System.out.print(s.charAt(i-1));
+			}
+			}
+			}
+
+			}
+	}
+
+

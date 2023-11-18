@@ -1,0 +1,52 @@
+
+public class VarArgs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String item1="rose";
+		String item2="Pink Rose";
+		String item3="Red Rose";
+		
+		//String[] shopping= {item1,item2,item3};
+		printShoppingList(item1,item2,item3);
+		printShoppingList("Bread","Rose,"Lily");
+
+	}
+	
+//	public static void printShoppingList(String name1,String name2)
+//	{
+//		System.out.println("Shopping List:");
+//		System.out.println("1. "+name1);
+//		System.out.println("2. "+name2);
+//	}
+//	
+//	public static void printShoppingList(String name1,String name2,String name3)
+//	{
+//		System.out.println("Shopping List:");
+//		System.out.println("1. "+ name1);
+//		System.out.println("2. "+ name2);
+//		System.out.println("3. "+ name3);
+//	}
+//	
+//	public static void printShoppingList(String[] arr)
+//	{
+//		System.out.println("Shopping List:");
+//		for(int i=0;i<arr.length;i++)
+//		{
+//			System.out.println(i+1+":"+arr[i]);
+//		}
+//		System.out.println();
+//	}
+	
+	public static void printShoppingList(String... arr)
+	{
+		System.out.println("Shopping List:");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(i+1+":"+arr[i]);
+		}
+		System.out.println();
+	}
+
+}

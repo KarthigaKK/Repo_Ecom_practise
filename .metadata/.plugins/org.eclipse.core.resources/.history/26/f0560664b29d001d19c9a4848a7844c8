@@ -1,0 +1,24 @@
+package PageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class OfferPage {
+	
+	WebDriver driver;
+	
+	public OfferPage(WebDriver driver)
+	{
+		this.driver=driver;
+	}
+	
+	//testContextSetup.driver.findElement(By.cssSelector("#search-field")).sendKeys(shortName)
+	
+	//Action Methods
+	
+	public void setItemName(String name)
+	{
+		driver.findElement(By.cssSelector("#search-field")).sendKeys(name);
+	}
+
+}

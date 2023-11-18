@@ -1,0 +1,42 @@
+import java.util.Arrays;
+
+public class SecondSmallestNo {
+
+	public static Object secondSmallestNo(Integer[] ary)
+	{
+
+		if(ary.length <=1)
+		{
+			return null;
+		}
+		
+		Arrays.sort(ary);//2,3,4,5,6
+
+		for(int i=0;i<ary.length;i++)
+		{
+			if(ary[i]!=ary[i+1])
+			{
+				return ary[i+1];
+			}
+
+			return null;
+		}
+
+		return ary[1];
+
+
+
+
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Integer[] arr1=new Integer[]{2,3,4,5,6};
+		secondSmallestNo(arr1);
+		Integer[] arr2=new Integer[]{3,3,3,3,3};
+		secondSmallestNo(arr1);
+		
+
+	}
+
+}
